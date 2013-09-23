@@ -13,3 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore files with secure information eg. credentials
+config/initializers/setup_mail.rb
