@@ -31,4 +31,7 @@ gem 'faker'
 # User authentication gem
 gem 'devise'
 
+# Autorization Control for various functionality
+gem 'cancan'
+
 
