@@ -34,4 +34,5 @@ gem 'devise'
 # Autorization Control for various functionality
 gem 'cancan'
 
-
+# Markdown support
+gem 'redcarpet'
