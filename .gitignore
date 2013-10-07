@@ -13,6 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/public/tmp/**
 
 # Ignore files with secure information eg. credentials
 

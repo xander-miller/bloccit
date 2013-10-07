@@ -6,12 +6,17 @@
         <%= image_tag(@post.user.avatar.tiny.url) if @post.user.avatar? %>
         submitted <%= time_ago_in_words(@post.created_at) %> ago by 
         <%= @post.user.name %>
-    </small>   
+      </small>   
     <p><%= markdown @post.body %></p>
   </div>
   <div class="span4">
     <% if can? :edit, @post %>
       <%= link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-large btn-block' %>
     <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="span8">
+    <%= image_tag(@post.image.url, class: "img-polaroid") if @post.image? %>
   </div>
 </div>
