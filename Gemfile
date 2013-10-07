@@ -36,3 +36,15 @@ gem 'cancan'
 
 # Markdown support
 gem 'redcarpet'
+
+# Upload Images
+gem 'carrierwave'
+
+# Wrapper for image magick to manipulate images
+gem 'mini_magick'
+
+# Facilitate use of S3 Amazon cloud storage
+gem 'fog'
+
+# Credential and other secret information Handling
+gem 'figaro'

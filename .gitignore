@@ -15,4 +15,6 @@
 /tmp
 
 # Ignore files with secure information eg. credentials
-config/initializers/setup_mail.rb
+
+## Ignore application configuration
+/config/application.yml
