@@ -48,3 +48,6 @@ gem 'fog'
 
 # Credential and other secret information Handling
 gem 'figaro'
+
+# Pagination of large collections
+gem 'will_paginate', '~> 3.0'
