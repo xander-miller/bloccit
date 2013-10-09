@@ -20,6 +20,7 @@ rand(4..10).times do
     password_confirmation: password)
   u.skip_confirmation!
   u.save
+  commenters << u
 
   rand(5..12).times do
     topic = topics.first # getting the first topic here
@@ -34,8 +35,7 @@ rand(4..10).times do
     
     # comments...
     rand(3..7).times do
-      p.comments.create(
-        body: Faker::Lorem.paragraphs(rand(1..2)).join("\n"))
+      p.comments.create(body: Faker::Lorem.paragraphs(rand(1..2)).join("\n"))
     end
   end
 end
