@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="span1">
+    <%= image_tag(comment.user.avatar.medium.url, class: "img-polaroid pull-left") if comment.user.avatar? %>
+  </div>
+  <div class="span7">
+    <div class="well">
+      <h5><%= comment.user.name %></h5>
+      <p><%=comment.body%></p>
+    </div>
+  </div>
+</div>

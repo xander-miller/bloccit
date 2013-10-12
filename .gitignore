@@ -14,6 +14,10 @@
 /log/*.log
 /tmp
 /public/tmp/**
+/public/uploads/**
+
+# Ignore seed files.
+/lib/assets/avatars/*
 
 # Ignore files with secure information eg. credentials
 

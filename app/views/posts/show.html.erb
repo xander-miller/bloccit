@@ -1,22 +1,40 @@
-<h1><%= markdown @post.title %></h1>
+<div class="row-fluid">
+  <div class="span4">
+    <h1><%= markdown @post.title %></h1>
+  </div>
+  <div class="span4 offset4">
+    <% if can? :edit, @post %>
+      <%= link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-large btn-block' %>
+    <% end %>
+  </div>
+</div>
 
 <div class="row">
   <div class="span8">
       <small>
-        <%= image_tag(@post.user.avatar.tiny.url) if @post.user.avatar? %>
+        <%= image_tag(@post.user.avatar.tiny.url, class: "img-circle") if @post.user.avatar? %>
         submitted <%= time_ago_in_words(@post.created_at) %> ago by 
         <%= @post.user.name %>
       </small>   
     <p><%= markdown @post.body %></p>
   </div>
   <div class="span4">
-    <% if can? :edit, @post %>
-      <%= link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-large btn-block' %>
+    <% if can? :edit, @comment %>
+     <%= render partial: "comments/form", locals: { topic: @topic, post: @post, comment: @comment } %>
     <% end %>
   </div>
 </div>
 <div class="row">
   <div class="span8">
     <%= image_tag(@post.image.url, class: "img-polaroid") if @post.image? %>
+  </div>
+  <div class="span4">
+   
+  </div>
+</div>
+<div class="row">
+  <div class="span8">
+    <h2>Comments</h2>
+    <%= render partial: "comments/comment", collection: @comments %>
   </div>
 </div>
