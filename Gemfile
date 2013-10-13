@@ -51,3 +51,7 @@ gem 'figaro'
 
 # Pagination of large collections
 gem 'will_paginate', '~> 3.0'
+
+#Facebook OAuth
+gem 'omniauth'
+gem 'omniauth-facebook'
