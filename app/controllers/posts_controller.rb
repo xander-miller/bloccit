@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     authorize! :read, @topic, message: "You need to be signed-in to do that."
     @post = Post.find(params[:id])
     @comments = @post.comments
-    @comment = Comment.new
+    @comment = current_user.comments.new
   end
 
   def new
