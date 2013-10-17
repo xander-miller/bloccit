@@ -7,7 +7,7 @@
       <div class="well">
         <h5 class="pull-left"><%= comment.user.name %></h5>
         <% if can? :destroy, comment %>
-          <%= link_to 'X', [@topic, @post, comment],class: 'close pull-right', method: :delete %>
+          <%= link_to 'X', comment_url_helper(comment),class: 'close pull-right', method: :delete %>
         <% end %>
         <div class="row"><p class="span6"><%=comment.body%></p></div>
       </div>

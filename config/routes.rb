@@ -1,6 +1,7 @@
 Bloccit::Application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }
+  resources :users, only: [:show] # for public profiles
 
   resources :topics do
     resources :posts, except: [:index] do
