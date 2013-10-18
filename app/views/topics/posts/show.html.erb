@@ -33,7 +33,10 @@
   </div>
   <div class="span4">   
     <% if can? :edit, @comment %>
-      <%= render partial: "comments/form", locals: { topic: @topic, post: @post, comment: @comment } %>
+      <a href="#" class="js-show-hide" data-selector="js-new-comment">Add Comment</a>
+      <div class="js-new-comment hide">
+        <%= render partial: "comments/form", locals: { topic: @topic, post: @post, comment: @comment } %>
+      </div>
     <% end %>
   </div>
 </div>
