@@ -50,7 +50,7 @@
 </div>
 <div class="row">
   <div class="span8">
-    <h2>Comments</h2>
+    <h2 class='js-comments-count'><%= @comments.count %> Comments</h2>
     <%= render partial: "comments/comment", collection: @comments %>
   </div>
 </div>
