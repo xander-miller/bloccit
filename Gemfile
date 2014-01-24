@@ -60,6 +60,8 @@ gem 'figaro'
 # Pagination of large collections
 gem 'will_paginate', '~> 3.0'
 
+gem 'newrelic_rpm'
+
 #Facebook OAuth
 gem 'omniauth'
 gem 'omniauth-facebook'
